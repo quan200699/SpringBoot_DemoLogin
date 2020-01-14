@@ -16,6 +16,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.ArrayList;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -56,7 +58,7 @@ public class UserController {
             }
         }
         Role role = roleService.findRoleByName(DEFAULT_ROLE);
-        Set<Role> roles = new HashSet<>();
+        List<Role> roles = new ArrayList<>();
         roles.add(role);
         user.setRoles(roles);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
