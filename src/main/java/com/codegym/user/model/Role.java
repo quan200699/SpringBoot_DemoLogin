@@ -1,7 +1,7 @@
 package com.codegym.user.model;
 
 import lombok.Data;
-
+import java.util.List;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
